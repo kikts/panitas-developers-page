@@ -46,7 +46,7 @@ export default class Banner extends Vue {}
 .banner .background img {
   position: fixed;
   z-index: -1;
-  width: 200vh;
+  width: 100%;
   height: 100vh;
 }
 
