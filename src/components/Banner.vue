@@ -9,7 +9,9 @@
       </div>
       <div class="header">
         <div class="title">PANITAS DEVELOPERS COMMUNITY</div>
-        <div class="buttonAboutMe"><button>¿Quiénes somos?</button></div>
+        <div class="buttonAboutMe" @click="goAboutSection">
+          <button>¿Quiénes somos?</button>
+        </div>
       </div>
     </div>
   </div>
@@ -20,6 +22,14 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   name: "Banner",
+  methods: {
+    goAboutSection() {
+      const section = document.querySelector(`#aboutMe`);
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+  },
 })
 export default class Banner extends Vue {}
 </script>
