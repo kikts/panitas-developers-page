@@ -1,0 +1,12 @@
+.bodyParallax {
+  z-index: 1;
+  background: #FFFFFF;
+  margin-top: 4rem;
+  padding: 5rem;
+}
+
+@media screen and (max-width: 902px) {
+  .bodyParallax {
+    padding: 2rem;
+  }
+}
