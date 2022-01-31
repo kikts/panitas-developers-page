@@ -48,13 +48,13 @@
 
 <script>
 import { Options, Vue } from "vue-class-component";
-import Logo from "../assets/logo.png";
+import Game1 from "../assets/games/game1.png";
 
 @Options({
   name: "Proyects",
   data() {
     return {
-      logo: Logo,
+      logo: Game1,
     };
   },
 })
@@ -99,6 +99,7 @@ export default class Proyects extends Vue {}
   border: 2px solid #333333;
   border-radius: 0px 0px 10px 10px;
   padding: 20px;
+  z-index: 2;
 }
 
 .card .card-body .title {
@@ -122,9 +123,29 @@ export default class Proyects extends Vue {}
 
 .card .card-header {
   text-align: center;
+  z-index: 1;
+  filter: blur(1px);
+  background: #010106;
 }
 
 .card .card-header img {
-  width: 200px;
+  width: 150px;
+  transition: 0.4s ease;
+}
+
+.card .card-header img:hover {
+  width: 160px;
+  transition: 0.4s ease;
+}
+
+.card .card-header:hover {
+  filter: blur(0px);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 902px) {
+  .proyects .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>
