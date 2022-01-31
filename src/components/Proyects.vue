@@ -4,40 +4,16 @@
     <div class="separate"></div>
     <div class="cards">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header" @click="game1">
           <img :src="logo" alt="" />
         </div>
         <div class="card-body">
-          <div class="title">TITULO</div>
-          <div class="description">DESCRIPCION CORTA</div>
-          <div class="buttons">
-            <button>VISITAR</button>
+          <div class="title">Dracalvo Esquiva</div>
+          <div class="description">
+            Ayuda a drago a esquivar los ajos que caen del cielo.
           </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <img :src="logo" alt="" />
-        </div>
-        <div class="card-body">
-          <div class="title">TITULO</div>
-          <div class="description">DESCRIPCION CORTA</div>
           <div class="buttons">
-            <button>VISITAR</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <img :src="logo" alt="" />
-        </div>
-        <div class="card-body">
-          <div class="title">TITULO</div>
-          <div class="description">DESCRIPCION CORTA</div>
-          <div class="buttons">
-            <button>VISITAR</button>
+            <button @click="game1">VISITAR</button>
           </div>
         </div>
       </div>
@@ -56,6 +32,12 @@ import Game1 from "../assets/games/game1.png";
     return {
       logo: Game1,
     };
+  },
+  methods: {
+    game1() {
+      window.location.href =
+        " https://comejiax.itch.io/dracalvo-esquiva-ajo-sino-morir";
+    },
   },
 })
 export default class Proyects extends Vue {}

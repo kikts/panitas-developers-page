@@ -4,6 +4,7 @@
     <div class="bodyParallax">
       <AboutMe />
       <Proyects />
+      <Discord />
     </div>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import { Options, Vue } from "vue-class-component";
 import Proyects from "../components/Proyects.vue";
 import AboutMe from "../components/AboutMe.vue";
+import Discord from "../components/Discord.vue";
 import Banner from "../components/Banner.vue";
 import "../styles/HomeStyles.css";
 
@@ -22,6 +24,7 @@ import "../styles/HomeStyles.css";
     Banner,
     AboutMe,
     Proyects,
+    Discord,
   },
 })
 export default class Home extends Vue {}

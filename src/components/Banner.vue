@@ -9,8 +9,10 @@
       </div>
       <div class="header">
         <div class="title">PANITAS DEVELOPERS COMMUNITY</div>
-        <div class="buttonAboutMe" @click="goAboutSection">
-          <button>¿Quiénes somos?</button>
+        <div class="buttons">
+          <div class="buttonAboutMe" @click="goAboutSection">
+            <button>¿Quiénes somos?</button>
+          </div>
         </div>
       </div>
     </div>

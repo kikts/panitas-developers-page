@@ -28,6 +28,9 @@
         <div class="separate"></div>
         <div class="title2">
           También, de vez en cuando hacemos eventos y jugamos a diversos juegos.
+          <a href="https://discord.gg/zSrMdZHE2N" target="_blank"
+            >Click para unirte.</a
+          >
         </div>
         <div class="icons">
           <div class="icon">
@@ -57,6 +60,16 @@ export default class AboutMe extends Vue {}
 </script>
 
 <style>
+a {
+  text-decoration: none;
+  color: rgb(79, 79, 255);
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .aboutMe {
   background: #f2f2f2;
   border-radius: 6px;
