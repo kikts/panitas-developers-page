@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="background">
-      <img src="../assets/bannerDiscord.png" alt="" />
+      <!-- <img src="../assets/bannerDiscord.png" alt="" /> -->
     </div>
     <div class="container">
       <div class="icon">
@@ -43,7 +43,10 @@ export default class Banner extends Vue {}
   /* margin-bottom: 50rem; */
 }
 
-.banner .background img {
+.banner .background {
+  background: url("../assets/bannerDiscord.png");
+  background-position: center center;
+  background-size: cover;
   position: fixed;
   z-index: -1;
   width: 100%;
@@ -79,13 +82,13 @@ export default class Banner extends Vue {}
 
 @media screen and (max-width: 962px) {
   .banner {
-    color: #333333;
+    color: white;
     margin-bottom: 16rem;
   }
 
-  .banner .background {
+  /* .banner .background {
     display: none;
-  }
+  } */
 
   .banner .container img {
     width: 300px;
