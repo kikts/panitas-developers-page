@@ -5,7 +5,7 @@
     <div class="cards">
       <div class="card">
         <div class="card-header" @click="game1">
-          <img :src="logo" alt="" />
+          <img :src="logoGame1" alt="" />
         </div>
         <div class="card-body">
           <div class="title">Dracalvo Esquiva</div>
@@ -17,26 +17,47 @@
           </div>
         </div>
       </div>
+      <div class="card">
+        <div class="card-header" @click="game1">
+          <img :src="logoGame2" alt="" />
+        </div>
+        <div class="card-body">
+          <div class="title">Lets-Begin</div>
+          <div class="description">
+            <br />
+            <br />
+          </div>
+          <div class="buttons">
+            <button @click="game2">VISITAR</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="separate"></div>
   </div>
 </template>
 
 <script>
+/* eslint-disable prettier/prettier */
 import { Options, Vue } from "vue-class-component";
 import Game1 from "../assets/games/game1.png";
+import Game2 from "../assets/games/game2.png";
 
 @Options({
   name: "Proyects",
   data() {
     return {
-      logo: Game1,
+      logoGame1: Game1,
+      logoGame2: Game2,
     };
   },
   methods: {
     game1() {
       window.location.href =
         " https://comejiax.itch.io/dracalvo-esquiva-ajo-sino-morir";
+    },
+    game2() {
+      window.location.href = " https://comejiax.itch.io/lets-begin";
     },
   },
 })
@@ -81,6 +102,7 @@ export default class Proyects extends Vue {}
   border: 2px solid #333333;
   border-radius: 0px 0px 10px 10px;
   padding: 20px;
+  height: 200px;
   z-index: 2;
 }
 
@@ -92,6 +114,7 @@ export default class Proyects extends Vue {}
 
 .card .card-body .buttons {
   margin-top: 30px;
+  height: 200px;
 }
 
 .card .card-body .buttons button {
@@ -111,12 +134,13 @@ export default class Proyects extends Vue {}
 }
 
 .card .card-header img {
-  width: 150px;
+  width: 350px;
+  height: 350px;
   transition: 0.4s ease;
 }
 
 .card .card-header img:hover {
-  width: 160px;
+  width: 400px;
   transition: 0.4s ease;
 }
 
